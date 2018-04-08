@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script
+</head>
+<body>
+<div class="container-fluid">
+
+
+<h2>--There are {{ count }} words in the text entered by the user.</h2>
+    <h4><a href="{% url 'home' %}" class="btn btn-primary">click here to go back</a></h4>
+    <hr />
+
+<h3>Text entered by the user:</h3>
+<h4>{{fulltext}}</h4>
+    <hr />
+
+<h3>Word count:</h3>
+
+{% for word, wordcount in worddictionary %}
+<ul>
+    <li>{{ word }} - {{ wordcount }}</li>
+</ul>
+
+
+{% endfor %}
+</div>
+
+</body>
