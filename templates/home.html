@@ -11,17 +11,17 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script
 </head>
 <body>
-<div class="container-fluid">
+    <div class="container-fluid">
 
-<h1 class="text-center">Word Count Website<h1/>
-    <h3><a href="{% url 'about' %}" class="btn btn-primary">Return to the about page</a></h3>
-    <hr />
-    <h2>Enter your text here:</h2>
-<form action="{% url 'count' %}">
+        <h1 class="text-center">Word Count Website<h1/>
+            <h3><a href="{% url 'about' %}" class="btn btn-primary">Return to the about page</a></h3>
+            <hr />
+            <h2>Enter your text here:</h2>
+            <form action="{% url 'count' %}">
 
-    <textarea cols="45" rows="6" name="fulltext"></textarea>
-    <br />
-    <input type="submit" value="Count" />
-</form>
-</div>
+                <textarea cols="45" rows="6" name="fulltext"></textarea>
+                <br />
+                <input type="submit" value="Count" />
+            </form>
+    </div>
 </body>
